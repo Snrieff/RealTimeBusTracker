@@ -9,7 +9,7 @@ var markers = [];
 
 function init() {
 	var myOptions = {
-		center    : { lat:42.353350,lng:-71.091525},
+		center    : {lat:42.353350,lng:-71.091525},
 		zoom      : 14,
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	};
@@ -32,6 +32,7 @@ async function addMarkers(){
 }
 
 function getIcon(bus){
+	//bus marker changes color when it changes directions
 	if (bus.attributes.direction_id === 0) {return 'red.png';}
 	return 'blue.png';	
 }
@@ -43,12 +44,13 @@ async function run(){
 	console.log(new Date());
 	console.log(locations);
 
-	// timer
+	// timer to update every 15 seconds
 	setTimeout(run, 15000);
 }
 
 // Request bus data from MBTA
 async function getBusLocations(){
+	//add your MTBA API to line 54 after the =
 	const url = 'https://api-v3.mbta.com/vehicles?api_key=ca34f7b7ac8a445287cab52fb451030a&filter[route]=1&include=trip';
 	const response = await fetch(url);
 	const json     = await response.json();
