@@ -7,6 +7,9 @@ This project is a real-time bus tracker website that tracks the Route 1 north an
 
 The website provides a user-friendly interface that allows users to locate where each bus on Route 1 is located every 15 seconds.
 
+<b>Future Improvements</b>
+<p>I will update the page's style to match the other projects and add more features. I plan to customize the map markers and include a secured API key. For now, users will need to add their own API key.</p>
+
 <b>Project Features</b>
 <ol>Real-time tracking of multiple bus routes</ol>
 <ol>User-friendly interface with interactive map display</ol>
